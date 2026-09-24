@@ -9,7 +9,7 @@ RES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SUPPORT="$HOME/Library/SwarmUI"
 RUNTIME="$SUPPORT/runtime"
 SWARM="$SUPPORT/SwarmUI"
-SWARM_REPO="${SWARM_REPO:-https://github.com/mcmonkeyprojects/SwarmUI}"
+SWARM_REPO="${SWARM_REPO:-https://github.com/Devlopali-dev/SwarmUI-macOs}"
 
 log() {
     echo "[launcher] $*"

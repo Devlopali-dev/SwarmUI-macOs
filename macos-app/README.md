@@ -14,7 +14,7 @@ Requires an Apple Silicon Mac with Xcode (or the Command Line Tools) for `swift 
 ## How it works
 
 - `SwarmUI.app` is a menu bar app (Swift, `Launcher/`) that runs `resources/swarm-launch.sh` in its own process group.
-- On first launch the embedded toolchains are copied to `~/Library/SwarmUI/runtime`, SwarmUI is cloned to `~/Library/SwarmUI/SwarmUI` and built. The browser then opens on the SwarmUI install wizard, which creates the ComfyUI venv with the embedded Python 3.11.
+- On first launch the embedded toolchains are copied to `~/Library/SwarmUI/runtime`, this fork (Devlopali-dev/SwarmUI-macOs, override with the `SWARM_REPO` env var) is cloned to `~/Library/SwarmUI/SwarmUI` and built. The browser then opens on the SwarmUI install wizard, which creates the ComfyUI venv with the embedded Python 3.11.
 - `swarm-launch.sh` mirrors `launch-macos.sh` + `launchtools/linux-build-logic.sh`, but only puts the embedded toolchains on `PATH`. Restart (exit code 42), the update button and extension builds work as upstream.
 - Data lives in `~/Library/SwarmUI` (no spaces in the path, which Python tooling needs).
 
